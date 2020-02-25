@@ -1,0 +1,18 @@
+{
+  "name": "sentiments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "insights.js",
+  "scripts": {
+    "read-tweets": "node -r esm reader.js",
+    "analyze-tweets": "node -r esm analyzer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^3.5.1",
+    "@google-cloud/pubsub": "^1.5.0",
+    "esm": "^3.2.25",
+    "request-promise": "^4.2.5"
+  }
+}
