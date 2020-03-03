@@ -1,13 +1,19 @@
 import Publisher from "./modules/publisher";
 import TwitterStreamer from "./modules/twitter-streamer";
 
+import {
+  TWITTER_CONSUMER_SECRET,
+  TWITTER_CONSUMER_KEY,
+  GCP_PUB_SUB_TOPIC
+} from "./config";
+
 (async () => {
-  const publisher = new Publisher("ENTER_YOUR_GCP_PUB_TOPIC");
+  const publisher = new Publisher(GCP_PUB_SUB_TOPIC);
 
   const streamer = await new TwitterStreamer(
     {
-      consumer_key: "ENTER_YOUR_CONSUMER_KEY_FROM_TWITTER",
-      consumer_secret: "ENTER_YOUR_CONSUMER_SECRET"
+      consumer_key: TWITTER_CONSUMER_KEY,
+      consumer_secret: TWITTER_CONSUMER_SECRET
     },
     [
       // Update your rules based on twitter stream rules

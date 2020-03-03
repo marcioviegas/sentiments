@@ -4,14 +4,15 @@
   "description": "",
   "main": "insights.js",
   "scripts": {
-    "read-tweets": "node -r esm reader.js",
-    "analyze-tweets": "node -r esm analyzer.js"
+    "read-tweets": "node -r esm -r dotenv/config reader.js",
+    "analyze-tweets": "node -r esm -r dotenv/config analyzer.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/firestore": "^3.5.1",
     "@google-cloud/pubsub": "^1.5.0",
+    "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "request-promise": "^4.2.5"
   }

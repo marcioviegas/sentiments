@@ -2,8 +2,13 @@ import Subscriber from "./modules/subscriber";
 import Persister from "./modules/persister";
 import Analyzer from "./modules/analyzer";
 
+import {
+  GCP_PROJECT_ID,
+  GCP_PUT_SUB_SUBSCRIPTION
+} from "./config";
+
 const analyzer = new Analyzer();
-const persister = new Persister("ENTER_YOUR_PROJECT_ID");
+const persister = new Persister(GCP_PROJECT_ID);
 
 const messageHandler = message => {
   let messageData;
@@ -32,6 +37,6 @@ const messageHandler = message => {
   }
 };
 
-const subscriber = new Subscriber("ENTER_YOUR_GCP_PUBSUB_SUBSCRIPTION");
+const subscriber = new Subscriber(GCP_PUT_SUB_SUBSCRIPTION);
 
 subscriber.listenForMessages(messageHandler);
