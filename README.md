@@ -13,7 +13,7 @@ If you put your rules, twitter's key and google's auth and api adresses we will 
 x: sentiment type (-1 bad sentiment, 1 good sentiment).\
 y: sentiment strength.
 
-![Carnival Sentiment Result](carnival.png)
+![Carnival Sentiments Result](carnival.png)
 
 ## Any Questions
 
