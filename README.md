@@ -1,7 +1,7 @@
 # Sentiments
 
-This is a prove of concept I did to analyze carnival sentiments during the holiday.\
-If you put your rules, twitter's key and google's auth and api adresses we will be able to analyze any set of tweets.
+This is a proof of concept I did to analyze carnival sentiments during the holiday.\
+If you put your rules, twitter's key and google's auth and api address we will be able to analyze any set of tweets.
 
 ## Architecture
 
